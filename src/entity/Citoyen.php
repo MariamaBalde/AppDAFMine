@@ -13,9 +13,10 @@ class Citoyen extends AbstractEntity
     private string $cni;
     private DateTime   $naissance;
     private string $lieu_naissance;
+    private string $urlPhotoIdentite;
    
 
-    public function __construct(int $id = 1, string $nom = "", string $prenom = "", string $cni = "", DateTime  $naissance = new DateTime(), string $lieu_naissance = "")
+    public function __construct(int $id = 1, string $nom = "", string $prenom = "", string $cni = "", DateTime  $naissance = new DateTime(), string $lieu_naissance = "",string $urlPhotoIdentite="")
     {
         $this->id = $id;
         $this->nom = $nom;
@@ -23,6 +24,7 @@ class Citoyen extends AbstractEntity
         $this->cni = $cni;
         $this->naissance = $naissance;
         $this->lieu_naissance = $lieu_naissance;
+        $this->urlPhotoIdentite = $urlPhotoIdentite;
     }
 
 
@@ -136,5 +138,19 @@ class Citoyen extends AbstractEntity
             $data["naissance"],
             $data["lieu_naissance"]
         );
+    }
+
+  
+    public function getUrlPhotoIdentite()
+    {
+        return $this->urlPhotoIdentite;
+    }
+
+   
+    public function setUrlPhotoIdentite($urlPhotoIdentite)
+    {
+        $this->urlPhotoIdentite = $urlPhotoIdentite;
+
+        return $this;
     }
 }

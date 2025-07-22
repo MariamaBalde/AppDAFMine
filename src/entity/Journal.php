@@ -12,7 +12,7 @@ class Journal
     private string $localisation;
     private TypeStatus $status;
     private int $code;
-    private Citoyen $cnirechercher;
+    private Citoyen $citoyen;
 
 
 
@@ -24,7 +24,7 @@ class Journal
         $this->localisation = $localisation;
         $this->status = $status;
         $this->code = $code;
-       $this->cnirechercher = new Citoyen();
+       $this->citoyen = new Citoyen();
 
 
 
@@ -116,18 +116,7 @@ class Journal
     }
 
   
-    public function getCnirechercher()
-    {
-        return $this->cnirechercher;
-    }
-
-   
-    public function setCnirechercher($cnirechercher)
-    {
-        $this->cnirechercher = $cnirechercher;
-
-        return $this;
-    }
+  
 
    
     public function getIpadresse()
@@ -139,6 +128,20 @@ class Journal
     public function setIpadresse($ipadresse)
     {
         $this->ipadresse = $ipadresse;
+
+        return $this;
+    }
+
+   
+    public function getCitoyen()
+    {
+        return $this->citoyen;
+    }
+
+  
+    public function setCitoyen($citoyen)
+    {
+        $this->citoyen = $citoyen;
 
         return $this;
     }
