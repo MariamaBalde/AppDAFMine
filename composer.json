@@ -1,0 +1,23 @@
+{
+    "name": "mariama-balde/app-daf",
+    "autoload": {
+        "psr-4": {
+            "MariamaBalde\\AppDaf\\": "src/",
+            "AppDaf\\Core\\": "app/core/",
+            "AppDaf\\Config\\": "app/config/",
+            "AppDaf\\Core\\Abstract\\": "app/core/abstract/",
+            "AppDaf\\Controller\\": "src/controller/",
+            "AppDaf\\Entity\\": "src/entity/",
+            "AppDaf\\Service\\": "src/service/"
+
+        }
+    },
+    "authors": [
+        {
+            "name": "MariamaBalde"
+        }
+    ],
+    "require": {
+        "vlucas/phpdotenv": "^5.6"
+    }
+}
